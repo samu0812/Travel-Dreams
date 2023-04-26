@@ -76,10 +76,14 @@ body {
   }
   
   .login-box a {
+    border: none;
+    outline: none;
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: darkgrey;
+    color: rgb(255, 255, 255);
+    background-color: #171b51;
+    
   }
   
   .login-box a:hover {
