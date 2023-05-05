@@ -17,7 +17,7 @@
         <label for="username">Correo</label>
         <input type="email" class="form-control" id="inputEmail4" style="background-color:transparent;" >
         <input type="submit" value="Log In">
-        <a class="btn btn-primary" href="login.html" role="button">Volver</a>
+        <a class="btn btn-primary" href="login.php" role="button">Volver</a>
         
       </form>
     </div>

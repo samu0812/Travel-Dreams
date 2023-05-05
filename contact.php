@@ -22,31 +22,29 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    <link rel="stylesheet" href="css/styletabla.css">
+    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
-	<script src="js/tabla.js"></script>
   </head>
   <body>
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Travel Dreams</a>
+	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de </a></li>
-	          <li class="nav-item active"><a href="mis_viajes.html" class="nav-link">Mis Viajes</a></li>
-	          <li class="nav-item"><a href="paquetes.html" class="nav-link">Paquetes</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contactanos</a></li>
-            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-			      <li class="nav-item"><a href="registro.html" class="nav-link">Registrarse</a></li>
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li>
+	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
+	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>>
+	          <li class="nav-item active"><a href="contact.php" class="nav-link">Contactanos</a></li>
+            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+			    <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -58,54 +56,35 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Viajes</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Mis Viajes</h1>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.php">Home</a></span> <span>Contactanos</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Contactanos</h1>
           </div>
         </div>
       </div>
     </div>
-	<section>
-		<!--for demo wrap-->
-		<section>
-			<!--for demo wrap-->
-			<h1>Paquetes Contratados</h1>
-			<div class="tbl-header">
-			  <table cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th>Id Paquete</th>
-						<th>Descripcion</th>
-						<th>Precio</th>
-						<th>Fecha de Contratación</th>
-						<th>Fecha Inicio Paquete</th>
-						<th>Estado del Paquete</th>
-						<th>Opción</th>
-					</tr>
-				</thead>
-			  </table>
-			</div>
-			<div class="tbl-content">
-			  <table cellpadding="0" cellspacing="0" border="0">
-				<tbody>
-				  <tr>
-					<td>001</td>
-					<td>Mendoza</td>
-					<td>$100038</td>
-					<td>12/12/22</td>
-					<td>12/8/23</td>
-					<td>Vigente</td>
-					<td><button type="button" class="btn btn-danger">Cancelar <i class="fa-solid fa-ban fa-beat"></i></button></td>
-          
-				  </tr>
-				  
-				</tbody>
-			  </table>
-			</div>
-		  </section>
-		  
-	  
-	  
 
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Información de Contacto</h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-3">
+            <p><span>Dirección:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Teléfono:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+          </div>
+        </div>
+
+    </section>
 
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">

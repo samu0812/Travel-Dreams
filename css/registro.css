@@ -124,6 +124,19 @@ form {
     }
     }
 
+    .ok{
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      background-color: #1e8;
+    }
+    .na{
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      background-color: #1e8;
+    }
+
     body.menu-show {
       overflow: hidden;
       position: fixed;
