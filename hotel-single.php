@@ -31,19 +31,19 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Adventure</a>
+	      <a class="navbar-brand" href="index.php">Adventure</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="places.html" class="nav-link">Places</a></li>
-	          <li class="nav-item active"><a href="hotel.html" class="nav-link">Hotels</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="places.php" class="nav-link">Places</a></li>
+	          <li class="nav-item active"><a href="hotel.php" class="nav-link">Hotels</a></li>
+	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -55,7 +55,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Hotel</span></p>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.php">Home</a></span> <span>Hotel</span></p>
             <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Hotels</h1>
           </div>
         </div>
@@ -203,11 +203,11 @@
           			<div class="row">
           				<div class="col-md-4">
 				    				<div class="destination">
-				    					<a href="hotel-single.html" class="img img-2" style="background-image: url(images/room-4.jpg);"></a>
+				    					<a href="hotel-single.php" class="img img-2" style="background-image: url(images/room-4.jpg);"></a>
 				    					<div class="text p-3">
 				    						<div class="d-flex">
 				    							<div class="one">
-						    						<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+						    						<h3><a href="hotel-single.php">Hotel, Italy</a></h3>
 						    						<p class="rate">
 						    							<i class="icon-star"></i>
 						    							<i class="icon-star"></i>
@@ -232,11 +232,11 @@
 				    			</div>
 				    			<div class="col-md-4">
 				    				<div class="destination">
-				    					<a href="hotel-single.html" class="img img-2" style="background-image: url(images/room-5.jpg);"></a>
+				    					<a href="hotel-single.php" class="img img-2" style="background-image: url(images/room-5.jpg);"></a>
 				    					<div class="text p-3">
 				    						<div class="d-flex">
 				    							<div class="one">
-						    						<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+						    						<h3><a href="hotel-single.php">Hotel, Italy</a></h3>
 						    						<p class="rate">
 						    							<i class="icon-star"></i>
 						    							<i class="icon-star"></i>
@@ -261,11 +261,11 @@
 				    			</div>
 				    			<div class="col-md-4">
 				    				<div class="destination">
-				    					<a href="hotel-single.html" class="img img-2" style="background-image: url(images/room-6.jpg);"></a>
+				    					<a href="hotel-single.php" class="img img-2" style="background-image: url(images/room-6.jpg);"></a>
 				    					<div class="text p-3">
 				    						<div class="d-flex">
 				    							<div class="one">
-						    						<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+						    						<h3><a href="hotel-single.php">Hotel, Italy</a></h3>
 						    						<p class="rate">
 						    							<i class="icon-star"></i>
 						    							<i class="icon-star"></i>
@@ -394,11 +394,11 @@
           			<div class="row">
           				<div class="col-md-4">
 				    				<div class="destination">
-				    					<a href="hotel-single.html" class="img img-2" style="background-image: url(images/hotel-1.jpg);"></a>
+				    					<a href="hotel-single.php" class="img img-2" style="background-image: url(images/hotel-1.jpg);"></a>
 				    					<div class="text p-3">
 				    						<div class="d-flex">
 				    							<div class="one">
-						    						<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+						    						<h3><a href="hotel-single.php">Hotel, Italy</a></h3>
 						    						<p class="rate">
 						    							<i class="icon-star"></i>
 						    							<i class="icon-star"></i>
@@ -423,11 +423,11 @@
 				    			</div>
 				    			<div class="col-md-4">
 				    				<div class="destination">
-				    					<a href="hotel-single.html" class="img img-2" style="background-image: url(images/hotel-2.jpg);"></a>
+				    					<a href="hotel-single.php" class="img img-2" style="background-image: url(images/hotel-2.jpg);"></a>
 				    					<div class="text p-3">
 				    						<div class="d-flex">
 				    							<div class="one">
-						    						<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+						    						<h3><a href="hotel-single.php">Hotel, Italy</a></h3>
 						    						<p class="rate">
 						    							<i class="icon-star"></i>
 						    							<i class="icon-star"></i>
@@ -452,11 +452,11 @@
 				    			</div>
 				    			<div class="col-md-4">
 				    				<div class="destination">
-				    					<a href="hotel-single.html" class="img img-2" style="background-image: url(images/hotel-3.jpg);"></a>
+				    					<a href="hotel-single.php" class="img img-2" style="background-image: url(images/hotel-3.jpg);"></a>
 				    					<div class="text p-3">
 				    						<div class="d-flex">
 				    							<div class="one">
-						    						<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+						    						<h3><a href="hotel-single.php">Hotel, Italy</a></h3>
 						    						<p class="rate">
 						    							<i class="icon-star"></i>
 						    							<i class="icon-star"></i>

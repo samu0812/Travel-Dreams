@@ -1,0 +1,21 @@
+form{
+    text-align: absolute;
+    font-family: 'Domine', serif;
+    background-color: #f9be37;
+    box-sizing: border-box;
+    border: 15px solid #f9be37;
+    border-radius: 5%;;
+
+
+}h1{
+    text-align: center;
+
+}textarea{
+    margin-bottom: 20px;
+}
+div{
+    margin-bottom: 20px;
+}
+label{
+    color:black
+}

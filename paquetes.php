@@ -31,20 +31,20 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Travel Dreams</a>
+	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de </a></li>
-				<li class="nav-item"><a href="mis_viajes.html" class="nav-link">Mis Viajes</a></li>
-				<li class="nav-item active"><a href="paquetes.html" class="nav-link">Paquetes</a></li>
-				<li class="nav-item"><a href="contact.html" class="nav-link">Contactanos</a></li>
-				<li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-			  	<li class="nav-item"><a href="registro.html" class="nav-link">Registrarse</a></li>
+				<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de </a></li>
+				<li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
+				<li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
+				<li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+				<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+			  	<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
 			</ul>
 	      </div>
 	    </div>
@@ -56,7 +56,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Paquetes</span></p>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.php">Home</a></span> <span>Paquetes</span></p>
             <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Paquetes</h1>
           </div>
         </div>

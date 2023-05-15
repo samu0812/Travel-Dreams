@@ -13,20 +13,20 @@
   <body>
     	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Travel Dreams</a>
+	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">Acerca de</a></li>
-	          <li class="nav-item"><a href="mis_viajes.html" class="nav-link">Mis Viajes</a></li>
-	          <li class="nav-item"><a href="paquetes.html" class="nav-link">Paquetes</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contactanos</a></li>
-            <li class="nav-item activate"><a href="login.html" class="nav-link">Login</a></li>
-			      <li class="nav-item"><a href="registro.html" class="nav-link">Registrarse</a></li>
+            <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">Acerca de</a></li>
+	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
+	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+            <li class="nav-item activate"><a href="login.php" class="nav-link">Login</a></li>
+			      <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -42,8 +42,8 @@
         <label for="password">Contraseña</label>
         <input type="password" class="form-control" id="inputPassword4">
         <input type="submit" value="Log In">
-        <a href="recuperar_contraseña.html">Olvidaste tu contraseña?</a><br>
-        <a href="registro.html">No tienes una cuenta?</a>
+        <a href="recuperar_contraseña.php">Olvidaste tu contraseña?</a><br>
+        <a href="registro.php">No tienes una cuenta?</a>
       </form>
     </div>
   </body>

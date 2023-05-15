@@ -22,31 +22,29 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    <link rel="stylesheet" href="css/styletabla.css">
+    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
-	<script src="js/tabla.js"></script>
   </head>
   <body>
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Travel Dreams</a>
+	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de </a></li>
-	          <li class="nav-item active"><a href="mis_viajes.html" class="nav-link">Mis Viajes</a></li>
-	          <li class="nav-item"><a href="paquetes.html" class="nav-link">Paquetes</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contactanos</a></li>
-            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-			      <li class="nav-item"><a href="registro.html" class="nav-link">Registrarse</a></li>
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="acerca.php" class="nav-link">Acerca de</a></li>
+	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
+	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+			      <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -58,56 +56,93 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Viajes</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Mis Viajes</h1>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.php">Home</a></span> <span>Acerca de</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Nosotros</h1>
           </div>
         </div>
       </div>
     </div>
-	<section>
-		<!--for demo wrap-->
-		<section>
-			<!--for demo wrap-->
-			<h1>Paquetes Contratados</h1>
-			<div class="tbl-header">
-			  <table cellpadding="0" cellspacing="0" border="0">
-				<thead>
-					<tr>
-						<th>Id Paquete</th>
-						<th>Descripcion</th>
-						<th>Precio</th>
-						<th>Fecha de Contratación</th>
-						<th>Fecha Inicio Paquete</th>
-						<th>Estado del Paquete</th>
-						<th>Opción</th>
-					</tr>
-				</thead>
-			  </table>
-			</div>
-			<div class="tbl-content">
-			  <table cellpadding="0" cellspacing="0" border="0">
-				<tbody>
-				  <tr>
-					<td>001</td>
-					<td>Mendoza</td>
-					<td>$100038</td>
-					<td>12/12/22</td>
-					<td>12/8/23</td>
-					<td>Vigente</td>
-					<td><button type="button" class="btn btn-danger">Cancelar <i class="fa-solid fa-ban fa-beat"></i></button></td>
-          
-				  </tr>
-				  
-				</tbody>
-			  </table>
-			</div>
-		  </section>
-		  
-	  
-	  
 
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="intro ftco-animate">
+    					<h3><span>01</span> Viaja</h3>
+    					<p> Un viaje breve puede tener un gran impacto en tu vida, ya que te permite escapar de la rutina, experimentar nuevas aventuras, aprender y mejorar tu bienestar mental. Así que no lo pienses más y haz ese viaje que has estado postergando, ¡no te arrepentirás!</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="intro ftco-animate">
+    					<h3><span>02</span> Experimenta</h3>
+    					<p> Experimentar algo nuevo y emocionante durante un viaje puede ayudarte a relajarte y a olvidarte de tus preocupaciones. Ya sea que estés probando un nuevo tipo de comida, aprendiendo una nueva actividad o simplemente explorando un lugar nuevo, estas experiencias pueden aumentar tu estado de ánimo y reducir el estrés.</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="intro ftco-animate">
+    					<h3><span>03</span> Relajate</h3>
+    					<p>Un viaje breve te permite cambiar de ritmo y desconectarte de las obligaciones y tareas de la vida cotidiana. Esto te permite tomarte un respiro y reducir la sensación de urgencia que a menudo acompaña al trabajo y a la vida urbana.</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
 
+		
+		<section class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
+    	<div class="one-half ftco-animate">
+        <div class="heading-section ftco-animate ">
+          <h2 class="mb-4">Travel Dreams</h2>
+        </div>
+        <div>
+  				<p>Somos una Agencia de Viajes que se dedica a crear momentos, experiencias, aventuras y recuerdos inolvidables, a traves de viajes por toda la Argentina. Brindamos los mejores paquetes turísticos, hacia los lugares mas extraordinarios de nuestro país, con alojamiento y actividades de acuerdo a sus gustos, intereses y presupuesto.  </p>
+  			</div>
+    	</div>
+    </section>
 
+    <section class="ftco-section services-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-yatch"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Actividades Especiales</h3>
+                <p>Te recomendamos las actividades más divertidas que podes hacer en cada destino elegido.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-around"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Variedad de Destinos</h3>
+                <p>Contamos con la mejor seleccion de destinos en nuestro país.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-compass"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Experiencias guiadas</h3>
+                <p>Te recomendamos los mejores restaurantes, lugares historicos y culturales,  que podes recorrer en cada destino elegido.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-map-of-roads"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">La mejor Ubicación</h3>
+                <p> Nuestros alojamientos se encuentran en las mejores ubicaciones para hacer turismo en cada una de las ciudades.</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
