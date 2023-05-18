@@ -38,13 +38,13 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item active"><a href="acerca.php" class="nav-link">Acerca de</a></li>
-	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
-	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
-            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
-			      <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="about.html" class="nav-link">Acerca de</a></li>
+	          <li class="nav-item"><a href="mis_viajes.html" class="nav-link">Mis Viajes</a></li>
+	          <li class="nav-item"><a href="paquetes.html" class="nav-link">Paquetes</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contactanos</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+			      <li class="nav-item"><a href="registro.html" class="nav-link">Registrarse</a></li>
 	        </ul>
 	      </div>
 	    </div>

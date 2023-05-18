@@ -1,3 +1,9 @@
+<?php
+	if (session_status() !== PHP_SESSION_ACTIVE) {
+		session_start();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,8 +50,17 @@
 	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
 			  <!-- Eliminar blog -->
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
-			  <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
 			  <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
+			  <li class="nav-item">
+    		<?php
+        		if(isset($_SESSION['usuario'])) {
+            		echo '<a href="cerrar_sesion.php" class="nav-link">Cerrar sesión</a>';
+        		} else {
+            			echo '<a href="login.php" class="nav-link">Login</a>';
+       				 }
+    		?>
+			</li>
+  				
 	        </ul>
 	      </div>
 	    </div>
@@ -58,7 +73,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-9 ftco-animate mb-5 pb-5 text-center text-md-left" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Descubre <br>Nuevos Lugares</h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encuentra grandiosos lugares para descansar, relajarte, comprar y mucho mas</p>
+			<p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encuentra grandiosos lugares para descansar, relajarte, comprar y mucho mas</p>
           </div>
         </div>
       </div>

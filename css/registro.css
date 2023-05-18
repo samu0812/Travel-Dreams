@@ -124,6 +124,19 @@ form {
     }
     }
 
+    .ok{
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      background-color: #1e8;
+    }
+    .bad{
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      background-color: rgb(162, 58, 14);
+    }
+
     body.menu-show {
       overflow: hidden;
       position: fixed;
