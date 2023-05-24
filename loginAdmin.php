@@ -35,17 +35,20 @@
     <div class="login-box">
       <img src="images/login.png" class="avatar" alt="Avatar Image">
       <h1>Login Admin</h1>
-      <form action="php/login.php" method="post">
+      <form action="" method="post">
         <!-- USERNAME INPUT -->
         <label for="username">Correo</label>
-        <input type="email" class="form-control" id="inputEmail4" style="background-color:transparent;" name="email" >
+        <input type="email" class="form-control" id="inputEmail4" style="background-color:transparent;" name="correo" >
         <!-- PASSWORD INPUT -->
         <label for="password">Contraseña</label>
-        <input type="password" class="form-control" id="inputPassword4">
+        <input type="password" class="form-control" id="inputPassword4" name="password">
         <input type="submit" value="Log In">
         <a href="recuperar_contraseñaAdmin.php">Olvidaste tu contraseña?</a><br>
         <a href="registroAdmin.php">No tienes una cuenta?</a>
       </form>
+      <?php
+        include ("loginControlAdmin.php");
+      ?>
     </div>
   </body>
 </html> 

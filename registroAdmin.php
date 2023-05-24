@@ -36,7 +36,7 @@
     </div>
   </nav>
   <div class="regis-box"></div>
-    <form class="form">
+    <form class="form" action="" method="POST">
       
         <h1 class="title">Registro Admin</h1>
         <span class="sub mb"> Ingrese sus Datos</span>
@@ -44,7 +44,7 @@
        <i class="fa-solid fa-person-circle-plus fa-bounce fa-2xl" style="color: #4b37e1;" id="logo"></i>
   
         <div name="datos">
-          <input type="email" class="input" placeholder="email" name="email">
+          <input type="email" class="input" placeholder="email" name="correo">
           <input type="password" class="input" placeholder="password" name="password"> 
           <input type="text" class="input" placeholder="Nombre" name="nombre">
           <input type="text" class="input" placeholder="Apellido" name="apellido">
@@ -55,9 +55,11 @@
         </div>
         <div class="suscrip">
           <span class="sub">¿Ya Tienes Una Cuenta? <a href="login.php">Ingresa</a></span>
-          <button class="btn btn-outline-secondary" onclick="login.php" >Registrarme</button>
+          <button type="submit" value="registroAdmin" class="btn btn-outline-secondary" name="registroAdmin">Registrarme</button>
         </div>
       </form>
-
+      <?php
+  include("control-registroAdmin.php");
+  ?>
 </body>
 </html>
