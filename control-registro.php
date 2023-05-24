@@ -58,11 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php
             }
         }
-    } else {
-        // Formulario no enviado
-        ?>
-        <h3 class="bad">¡Por favor complete los campos!</h3>
-        <?php
     }
     
     

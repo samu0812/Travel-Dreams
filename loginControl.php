@@ -29,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($password === $hash) {
             // La contraseña es correcta, iniciar la sesión
-            $_SESSION['usuario'] = $fila['personas_id_usuario'];
+            $_SESSION['usuario'] = $fila['id_usuario'];
+            header("Location: index.php");
 
             // Redirigir a la página principal o a otro destino deseado
-            echo $_SESSION;
         } else {
             // Contraseña incorrecta
             echo "Contraseña incorrecta";

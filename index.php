@@ -1,7 +1,5 @@
 <?php
-	if (session_status() !== PHP_SESSION_ACTIVE) {
-		session_start();
-	}
+	session_start()
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +52,7 @@
 			  <li class="nav-item">
     		<?php
         		if(isset($_SESSION['usuario'])) {
-            		echo '<a href="cerrar_sesion.php" class="nav-link">Cerrar sesión</a>';
+            		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
         		} else {
             			echo '<a href="login.php" class="nav-link">Login</a>';
        				 }
