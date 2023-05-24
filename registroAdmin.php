@@ -36,7 +36,7 @@
     </div>
   </nav>
   <div class="regis-box"></div>
-    <form class="form">
+    <form class="form" action="" method="POST">
       
         <h1 class="title">Registro Admin</h1>
         <span class="sub mb"> Ingrese sus Datos</span>
@@ -55,9 +55,11 @@
         </div>
         <div class="suscrip">
           <span class="sub">¿Ya Tienes Una Cuenta? <a href="login.php">Ingresa</a></span>
-          <button class="btn btn-outline-secondary" onclick="login.php" >Registrarme</button>
+          <button type="submit" value="registroAdmin" class="btn btn-outline-secondary" name="registroAdmin">Registrarme</button>
         </div>
       </form>
-
+      <?php
+  include("control-registroAdmin.php");
+  ?>
 </body>
 </html>

@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,200" />
+    
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
@@ -34,7 +35,7 @@
   </head>
   <body>
     
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,15 +44,15 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="indexAdmin.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de</a></li>
-	          <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
-	          <li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li>>
-            <li class="nav-item active"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li>
-	          <li class="nav-item "><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
-            <li class="nav-item"><a href="loginAdmin.php" class="nav-link">Login</a></li>
-			    <li class="nav-item"><a href="registroAdmin.php" class="nav-link">Registrarse</a></li>
-	        </ul>
+				<li class="nav-item"><a href="indexAdmin.php" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de </a></li>
+				<li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
+				<li class="nav-item "><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li>
+				<li class="nav-item active"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li>
+				<li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
+				<li class="nav-item"><a href="loginAdmin.php" class="nav-link">Login</a></li>
+			  	<li class="nav-item"><a href="registroAdmin.php" class="nav-link">Registrarse</a></li>
+			</ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -68,51 +69,52 @@
         </div>
       </div>
     </div>
-
+    
     <div class="container">
-		<form>
-    <h1>Crear Paquete <i class="fa-regular fa-square-plus fa-beat"></i></h1>
+		<form class="form" action="" method="POST">
+    <h1>Crear Paquete <span class="material-symbols-outlined">library_add</span></h1>
     
     <div class="datosPaquete">
-    <h2>Datos del Paquete</h2>
+    <h2>Datos del Paquete <span class="material-symbols-outlined">package</span></h2>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="mb-3">
 						<label for="disponibilidad" class="form-label">Disponibilidad</label>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 						<input type="text" class="form-control" id="disponibilidad" name="disponibilidad" required>
 					</div>
           <div class="mb-3">
 						<label for="fechaInicio" class="form-label">Fecha de Inicio</label>
-						<input type="date" class="form-control" id="fechaInicio" name="fechaInicio" required>
+						<input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
 					</div>
           <div class="mb-3">
 						<label for="fechaVigencia" class="form-label">Fecha de Vigencia</label>
-						<input type="date" class="form-control" id="fechaVigencia" name="fechaVigencia" required>
+						<input type="date" class="form-control" id="fecha_vigencia" name="fecha_vigencia" required>
 					</div>
 
 				</div>
 				<div class="col-md-6">
 					<div class="mb-3">
-						<label for="cantidadPersonas" class="form-label">Cantidad de Personas</label>
-						<input type="number" class="form-control" id="cantidadPersonas" name="cantidadPersonas" required>
+						<label for="cantidadPersonas" class="form-label">Cantidad de Personas </label>
+						<input type="number" class="form-control" id="cantidad_personas" name="cantidad_personas" required>
 					</div>
     
 					<div class="mb-3">
 						<label for="fechaFinal" class="form-label">Fecha Final</label>
-						<input type="date" class="form-control" id="fechaFinal" name="fechaFinal" required>
+						<input type="date" class="form-control" id="fecha_final" name="fecha_final" required>
 					</div>
 
 					<div class="mb-3">
-						<label for="fechaFinalVigencia" class="form-label">Fecha Final de Vigencia</label>
-						<input type="date" class="form-control" id="fechaFinalVigencia" name="fechaFinalVigencia" required>
+						<label for="fecha_fin_vig" class="form-label">Fecha Final de Vigencia</label>
+						<input type="date" class="form-control" id="fecha_fin_vig" name="fecha_fin_vig" required>
 					</div>
 				</div>
 			</div>
       </div>
       <div class="datosLugar">
-      <h2>Datos del Lugar</h2>
+      <h2>Datos del Lugar <span class="material-symbols-outlined">location_on</span></h2>
       <label for="lugar" class="form-label">Lugar</label>
-						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required>
+						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required name="ubicacion">
               <option selected>Lugar</option>
               <option value="1">Formosa</option>
               <option value="2">Salta</option>
@@ -120,26 +122,26 @@
             </select>
       <div class="form-floating">
         <label for="floatingTextarea2">Descripción</label>
-        <textarea class="form-control" placeholder="Describe los lugares del paquete..." id="floatingTextarea2" style="height: 100px"></textarea>
+        <textarea class="form-control" placeholder="Describe los lugares del paquete..." id="floatingTextarea2" style="height: 100px" name=descripcion></textarea>
       </div>
       </div>
       <div class="datosHospedaje">
-    <h2>Datos del Hospedaje</h2>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="mb-3">
-						<label for="nombreHospedaje" class="form-label">Nombre del Hospedaje</label>
-						<input type="text" class="form-control" id="nombreHospedaje" name="nombreHospedaje" required>
+        <h2>Datos del Hospedaje <span class="material-symbols-outlined">apartment</span></h2>
+			  <div class="row">
+				  <div class="col-md-6">
+					  <div class="mb-3">
+						  <label for="nombre_hospedaje" class="form-label">Nombre del Hospedaje</label>
+						  <input type="text" class="form-control" id="nombre_hospedaje" name="nombre_hospedaje" required>
 					</div>
           <div class="mb-3">
 						<label for="contactoHospedaje" class="form-label">Contacto</label>
-						<input type="number" class="form-control" id="contactoHospedaje" name="contactoHospedaje" required>
+						<input type="tel" class="form-control" id="contacto" name="contacto" required>
 					</div>
-				</div>
+				  </div>
 				<div class="col-md-6">
 					<div class="mb-3">
 						<label for="direccion" class="form-label">Dirección</label>
-						<input type="text" class="form-control" id="cantidadPersonas" name="text" required>
+						<input type="text" class="form-control" id="direccion" name="direccion" required>
 					</div>
     
 					<div class="mb-3">
@@ -150,32 +152,32 @@
         </div>
     <div class="form-floating">
       <label for="floatingTextarea2">Descripción</label>
-      <textarea class="form-control" placeholder="Describe el Hospedaje..." id="floatingTextarea2" style="height: 100px"></textarea>
+      <textarea class="form-control" placeholder="Describe el Hospedaje..." id="floatingTextarea2" style="height: 100px" name="descripcion_hospedaje"></textarea>
     </div>
       </div class="pension">
         <label for="pension" class="form-label">Pension</label>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="pension" id="flexRadioDefault1" value="SI">
         <label class="form-check-label" for="flexRadioDefault1">
           SI
         </label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <input class="form-check-input" type="radio" name="pension" id="flexRadioDefault2" value="NO"checked>
         <label class="form-check-label" for="flexRadioDefault2">
           NO
       </label>
       </div>
-      <h2>Datos del Transporte</h2>
+      <h2>Datos del Transporte <span class="material-symbols-outlined">flight_takeoff</span></h2>
       <div class= 'datosTransporte'>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="mb-3">
           <label for="transporte" class="form-label">Transporte</label>
-						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required>
+						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required name= "tipo_transporte">
               <option selected>Transporte</option>
-              <option value="1">Avión</option>
-              <option value="2">Colectivo</option>
+              <option value="Avión">Avión</option>
+              <option value="Colectivo">Colectivo</option>
             </select>
 					</div>
 
@@ -183,7 +185,7 @@
 				<div class="col-md-6">
 					<div class="mb-3">
           <label for="clase" class="form-label">Clase</label>
-						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required>
+						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required name="clase">
               <option selected>Clase</option>
               <option value="1">Vip</option>
               <option value="2">Economica</option>
@@ -192,34 +194,35 @@
 					</div>
       </div>
         <div class="col-md-6">
-					  <div class="mb-3">
-            <div class="mascota">
-          <label for="mascota" class="form-label">Mascota</label>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3">
-          <label class="form-check-label" for="flexRadioDefault3">
-            SI
-          </label>
-        </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault4" checked>
-        <label class="form-check-label" for="flexRadioDefault4">
-          NO
-      </label>
+					<div class="mb-3">
+            <div class="mascotaOpcion">
+              <label for="mascota" class="form-label">Mascota</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault3" value='SI'>
+                <label class="form-check-label" for="flexRadioDefault3">
+                  SI
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault4" value='NO' checked>
+                <label class="form-check-label" for="flexRadioDefault4">
+                NO
+                </label>
 
-					</div>
+				  </div>
+        </div>
+      <label>Precio del Paquete</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name='precio'>
+        </div>
       </div>
-     
-      </div>
-			<button type="submit" class="btn btn-primary">Guardar Paquete</button>
+			<button type="submit" value="crear_paquete" class="btn btn-outline-secondary" name="crear_paquete">Crear Paquete</button>
 		</form>
 	</div>
-
-
-
-   
-    
-  
+  <?php
+  include("controlPaquete.php");
+  ?>
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

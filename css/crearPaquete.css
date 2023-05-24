@@ -1,11 +1,15 @@
+body{
+    background: linear-gradient(70deg, rgb(252, 252, 125), orange);
+}
 form{
     text-align: absolute;
     font-family: 'Domine', serif;
-    background-color: #f9be37;
     box-sizing: border-box;
-    border: 15px solid #f9be37;
-    border-radius: 5%;;
+    border-radius: 5%;
 
+    border-width: 100px;
+
+    
 
 }h1{
     text-align: center;
@@ -13,6 +17,9 @@ form{
 }textarea{
     margin-bottom: 20px;
 }
+.input {
+    border-radius: 15px;
+  }
 div{
     margin-bottom: 20px;
 }
