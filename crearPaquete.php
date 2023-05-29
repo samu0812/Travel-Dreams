@@ -1,3 +1,7 @@
+<?php
+   session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,18 +45,30 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-
+		  <!-- Navbar Parte superior del sitio web -->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a href="indexAdmin.php" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de </a></li>
-				<li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
-				<li class="nav-item "><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li>
-				<li class="nav-item active"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li>
-				<li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
-				<li class="nav-item"><a href="loginAdmin.php" class="nav-link">Login</a></li>
-			  	<li class="nav-item"><a href="registroAdmin.php" class="nav-link">Registrarse</a></li>
-			</ul>
+	          <li class="nav-item"><a href="indexAdmin.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
+            <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
+	          <li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li> <!-- Provincias y descripcion de c/u -->
+	          <li class="nav-item active"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li><!-- Paquetes con transporte, hospedaja-->
+            <li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
+			  <!-- Eliminar blog -->
+
+			  <li class="nav-item">
+    		<?php
+        		if(isset($_SESSION['usuario'])) {
+            		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
+        		} else {
+            			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
+						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+
+       				 }
+    		?>
+			</li>
+  				
+	        </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -116,9 +132,9 @@
       <label for="lugar" class="form-label">Lugar</label>
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required name="ubicacion">
               <option selected>Lugar</option>
-              <option value="1">Formosa</option>
-              <option value="2">Salta</option>
-              <option value="3">Buenos Aires</option>
+              <option value="Formosa">Formosa</option>
+              <option value="Salta">Salta</option>
+              <option value="Buenos Aires">Buenos Aires</option>
             </select>
       <div class="form-floating">
         <label for="floatingTextarea2">Descripción</label>
@@ -187,9 +203,9 @@
           <label for="clase" class="form-label">Clase</label>
 						<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"required name="clase">
               <option selected>Clase</option>
-              <option value="1">Vip</option>
-              <option value="2">Economica</option>
-              <option value="3">Turista</option>
+              <option value="Vip">Vip</option>
+              <option value="Económica">Economica</option>
+              <option value="Turista">Turista</option>
             </select>
 					</div>
       </div>
@@ -205,6 +221,23 @@
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault4" value='NO' checked>
+                <label class="form-check-label" for="flexRadioDefault4">
+                NO
+                </label>
+
+				  </div>
+          <div class="col-md-6">
+					<div class="mb-3">
+            <div class="escala">
+              <label for="escala" class="form-label">Escala</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault3" value='SI'>
+                <label class="form-check-label" for="flexRadioDefault3">
+                  SI
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault4" value='NO' checked>
                 <label class="form-check-label" for="flexRadioDefault4">
                 NO
                 </label>

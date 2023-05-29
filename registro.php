@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 
-  <title>Document</title>
+  <title>registro cliente</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.php" class="nav-link">Acerca de</a></li>
+          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li>
           <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
           <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
           <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
@@ -47,10 +47,10 @@
 
     <div name="datos">
       <input type="email" class="input" placeholder="email" name="correo">
-      <input type="password" class="input" placeholder="password" name="password">
+      <input type="password" class="input" pattern=".{6,}" title="Debe contener letras y numeros" inputmode="verbatim" placeholder="password" name="password">
       <input type="text" class="input" placeholder="Nombre" name="nombre">
       <input type="text" class="input" placeholder="Apellido" name="apellido">
-      <input type="int" class="input" placeholder="DNI" name="dni">
+      <input type="int" class="input" title="Debe contener 8 números" placeholder="Dni" minlength="8" maxlength="8" name="dni">
       <input type="text" class="input" placeholder="Dirección" name="direccion">
       <input type="date" class="input" placeholder="Fecha Nacimiento" name="fecha_nacimiento">
       <input type="tel" class="input" placeholder="Nro Teléfono" name="telefono">

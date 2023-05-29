@@ -44,7 +44,7 @@
        <i class="fa-solid fa-person-circle-plus fa-bounce fa-2xl" style="color: #4b37e1;" id="logo"></i>
   
         <div name="datos">
-          <input type="email" class="input" placeholder="email" name="correo">
+          <input type="email" class="input" placeholder="correo" name="correo">
           <input type="password" class="input" placeholder="password" name="password"> 
           <input type="text" class="input" placeholder="Nombre" name="nombre">
           <input type="text" class="input" placeholder="Apellido" name="apellido">

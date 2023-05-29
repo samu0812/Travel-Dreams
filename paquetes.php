@@ -1,3 +1,7 @@
+<?php
+   session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,23 +33,34 @@
   </head>
   <body>
     
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-
+		  <!-- Navbar Parte superior del sitio web -->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de </a></li>
-				<li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
-				<li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
-				<li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
-				<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
-			  	<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
-			</ul>
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
+	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
+	          <li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
+			  <!-- Eliminar blog -->
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+			  <li class="nav-item">
+    		<?php
+        		if(isset($_SESSION['usuario'])) {
+            		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
+        		} else {
+            			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
+						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+
+       				 }
+    		?>
+			</li>
+  				
+	        </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -145,7 +160,10 @@
 							</form>
         		</div>
           </div><!-- END-->
-          <div class="col-lg-9">
+
+
+
+          <div class="col-lg-9"><!-- PAQUETE-->
           	<div class="row">
 		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
 		    				<div class="destination">
@@ -179,7 +197,8 @@
 		    						</p>
 		    					</div>
 		    				</div>
-		    			</div>
+		    			</div><!-- fin paquete-->
+					
 		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
 		    				<div class="destination">
 		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-2.jpg);">

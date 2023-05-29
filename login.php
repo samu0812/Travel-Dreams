@@ -21,7 +21,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Acerca de</a></li>
+	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li>
 	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
 	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
