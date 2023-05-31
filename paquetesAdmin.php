@@ -198,7 +198,7 @@
 										// Generar el HTML utilizando los datos de la vista
 										echo '<div class="col-sm col-md-6 col-lg-4 ftco-animate">';
 										echo '<div class="destination">';
-										echo '<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-1.jpg);">';
+
 										echo '<div class="icon d-flex justify-content-center align-items-center">';
 										echo '<span class="icon-link"></span>';
 										echo '</div>';
