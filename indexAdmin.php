@@ -1,3 +1,6 @@
+<?php
+   session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,14 +42,23 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="indexAdmin.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
-	          <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li> <!-- Provincias y descripcion de c/u -->
-	          <li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
-			  <!-- Eliminar blog -->
-			  <li class="nav-item"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li>
-	          <li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
-			  <li class="nav-item"><a href="loginAdmin.php" class="nav-link">Login</a></li>
-			  <li class="nav-item"><a href="registroAdmin.php" class="nav-link">Registrarse</a></li>
+
+			  <li class="nav-item">
+    		<?php
+        		if(isset($_SESSION['usuario'])) {
+					echo '<li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de</a></li>'; 
+					echo '<li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>';
+					echo '<li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li>';
+					echo '<li class="nav-item"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li>';
+					echo '<li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>';
+					echo '<li class="nav-item"><a href="cerrarSesionAdmin.php" class="nav-link">Cerrar sesión</a></li>';
+        		} else {
+            			echo '<li class="nav-item"><a href="loginAdmin.php" class="nav-link">Login</a></li>';
+						echo '<li class="nav-item"><a href="registroAdmin.php" class="nav-link">Registrarse</a></li>';
+
+       				 }
+    		?>
+			</li>
 	        </ul>
 	      </div>
 	    </div>

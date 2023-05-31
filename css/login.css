@@ -20,3 +20,9 @@
     border-bottom-right-radius: .3rem;
     }
     }
+.bad{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(162, 58, 14);
+}

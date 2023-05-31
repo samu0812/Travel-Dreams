@@ -29,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Datos del transporte
     $tipo_transporte = mysqli_real_escape_string($con, $_POST['tipo_transporte']);
     $clase = mysqli_real_escape_string($con, $_POST['clase']);
-    $mascota = mysqli_real_escape_string($con, $_POST['mascota']);
+    $mascota= mysqli_real_escape_string($con, $_POST['mascota']);
+    $escala= mysqli_real_escape_string($con, $_POST['escala']);
 
     $precio = mysqli_real_escape_string($con, $_POST['precio']);
 
@@ -43,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Datos del lugar
         $ubicacion =  $_POST['ubicacion'];
         $descripcion =  $_POST['descripcion'];
+        // Datos Hospedaje
         $nombre_hospedaje =  $_POST['nombre_hospedaje'];
         $contacto =  $_POST['contacto'];
         $direccion =  $_POST['direccion'];
@@ -52,7 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Datos del transporte
         $tipo_transporte =  $_POST['tipo_transporte'];
         $clase =  $_POST['clase'];
-        $mascota =  $_POST['$mascota'];
+        $mascota= $_POST['mascota'];
+        $escala = $_POST['escala'];
         
         $precio= $_POST['precio'];
         $usuario_administrador_id_admin=001;
@@ -62,23 +65,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $resultado1 = mysqli_query($con, $consulta1);
         
         $paquete_id = mysqli_insert_id($con);
-        
-        $consulta2 = "INSERT INTO lugares (ubicacion, descripcion, nombre_hospedaje, contacto, direccion, estrellas, descripcion_hospedaje, pension)
-                      VALUES ('$ubicacion', '$descripcion', '$nombre_hospedaje', '$contacto', '$direccion', '$estrellas', '$descripcion_hospedaje', '$pension')";
-        $resultado2 = mysqli_query($con, $consulta2);
-        
-        $lugar_id = mysqli_insert_id($con);
-        
-        $consulta3 = "INSERT INTO transporte (tipo_transporte, clase)
-                      VALUES ('$tipo_transporte', '$clase')";
-        $resultado3 = mysqli_query($con, $consulta3);
-        
-        $transporte_id = mysqli_insert_id($con);
 
-        if ($resultado1 && $resultado2 && $resultado3) {
+        $consulta2= "INSERT INTO lugares (ubicacion, descripcion)  VALUES ('$ubicacion', '$descripcion')";
+        $resultado2 = mysqli_query($con, $consulta2);
+        $lugares_id_lugares = mysqli_insert_id($con);
+        
+        $consulta3 = "INSERT INTO hospedaje (nombre_hospedaje, contacto, direccion, estrellas, descripcion_hospedaje, pension, lugares_id_lugares)
+                      VALUES ( '$nombre_hospedaje', '$contacto', '$direccion', '$estrellas', '$descripcion_hospedaje', '$pension', '$lugares_id_lugares')";
+        $resultado3 = mysqli_query($con, $consulta3);
+        $id_hospedaje= mysqli_insert_id($con);
+        
+        
+        $consulta4 = "INSERT INTO transporte (tipo_transporte, clase, mascota, escala)
+                      VALUES ('$tipo_transporte', '$clase', '$mascota', '$escala')";
+        $resultado4 = mysqli_query($con, $consulta4);
+        
+        $id_transporte = mysqli_insert_id($con);
+
+        if ($resultado1 && $resultado2 && $resultado4) {
+            //guarda en paquete has destinos, necesita los id's que estan en otras tablas que se obtienen con el mysqli insert id
             $consulta4 = "INSERT INTO paquetes_has_destinos (paquetes_id_paquete, destinos_id_lugares, transporte_id_transporte)
-                          VALUES ('$paquete_id', '$lugar_id', '$transporte_id')";
+                          VALUES ('$paquete_id', '$lugares_id_lugares', '$id_hospedaje')";
             $resultado4 = mysqli_query($con, $consulta4);
+            if ($tipo_transporte= 'Avión'){
+                $consulta5 = "INSERT INTO vuelos (transporte_id_transporte) VALUES ('$id_transporte')";
+                $resultado5 = mysqli_query($con, $consulta5);
+            }
+            if($tipo_transporte= 'Colectivo'){
+                $consulta6 = "INSERT INTO colectivo (transporte_id_transporte) VALUES ('$id_transporte')";
+                $resultado6 = mysqli_query($con, $consulta6);
+                echo "El coelctivo.";
+                
+            }
             
             if ($resultado4) {
                 echo "El paquete se ha guardado correctamente.";

@@ -12,7 +12,7 @@
   </head>
   <body>
     	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
+	      <div class="container">
 	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
@@ -21,7 +21,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Acerca de</a></li>
+	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li>
 	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
 	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
@@ -34,17 +34,20 @@
     <div class="login-box">
       <img src="images/login.png" class="avatar" alt="Avatar Image">
       <h1>Login</h1>
-      <form action="php/login.php" method="post">
+      <form action="" method="post">
         <!-- USERNAME INPUT -->
         <label for="username">Correo</label>
-        <input type="email" class="form-control" id="inputEmail4" style="background-color:transparent;" name="email" >
+        <input type="email" class="form-control" id="inputEmail4" style="background-color:white;" name="correo" >
         <!-- PASSWORD INPUT -->
         <label for="password">Contraseña</label>
-        <input type="password" class="form-control" id="inputPassword4">
+        <input type="password" class="form-control" id="inputPassword4" name= "password">
         <input type="submit" value="Log In">
         <a href="recuperar_contraseña.php">Olvidaste tu contraseña?</a><br>
         <a href="registro.php">No tienes una cuenta?</a>
       </form>
+      <?php
+        include ("loginControl.php");
+      ?>
     </div>
   </body>
 </html> 

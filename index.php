@@ -1,7 +1,11 @@
+<?php
+   session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Adventure - Free Bootstrap 4 Template by Colorlib</title>
+    <title>TRAVEL DREAMS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -31,7 +35,7 @@
     
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Travel Dreams</a>
+	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -44,8 +48,18 @@
 	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
 			  <!-- Eliminar blog -->
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
-			  <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
-			  <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
+			  <li class="nav-item">
+    		<?php
+        		if(isset($_SESSION['usuario'])) {
+            		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
+        		} else {
+            			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
+						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+
+       				 }
+    		?>
+			</li>
+  				
 	        </ul>
 	      </div>
 	    </div>

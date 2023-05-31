@@ -1,3 +1,7 @@
+<?php
+   session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,26 +30,38 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/paquete.css">
   </head>
   <body>
     
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">Travel Dreams</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-
+		  <!-- Navbar Parte superior del sitio web -->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de </a></li>
-				<li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
-				<li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
-				<li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
-				<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
-			  	<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
-			</ul>
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
+	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
+	          <li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
+			  <!-- Eliminar blog -->
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+			  <li class="nav-item">
+    		<?php
+        		if(isset($_SESSION['usuario'])) {
+            		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
+        		} else {
+            			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
+						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+
+       				 }
+    		?>
+			</li>
+  				
+	        </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -64,331 +80,73 @@
     </div>
 		
 		<section class="ftco-section">
-      <div class="container">
-        <div class="row">
-        	<div class="col-lg-3 sidebar order-md-last ftco-animate">
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Find City</h3>
-        			<form action="#">
-        				<div class="fields">
-		              <div class="form-group">
-		                <input type="text" class="form-control" placeholder="Destination, City">
-		              </div>
-		              <div class="form-group">
-		                <div class="select-wrap one-third">
-	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control" placeholder="Keyword search">
-	                      <option value="">Select Location</option>
-	                      <option value="">San Francisco USA</option>
-	                      <option value="">Berlin Germany</option>
-	                      <option value="">Lodon United Kingdom</option>
-	                      <option value="">Paris Italy</option>
-	                    </select>
-	                  </div>
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Date from">
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkout_date" class="form-control checkout_date" placeholder="Date to">
-		              </div>
-		              <div class="form-group">
-		              	<div class="range-slider">
-		              		<span>
-										    <input type="number" value="25000" min="0" max="120000"/>	-
-										    <input type="number" value="50000" min="0" max="120000"/>
-										  </span>
-										  <input value="1000" min="0" max="120000" step="500" type="range"/>
-										  <input value="50000" min="0" max="120000" step="500" type="range"/>
-										  </svg>
-										</div>
-		              </div>
-		              <div class="form-group">
-		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-		              </div>
-		            </div>
-	            </form>
-        		</div>
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Star Rating</h3>
-        			<form method="post" class="star-rating">
-							  <div class="form-check">
-									<input type="checkbox" class="form-check-input" id="exampleCheck1">
-									<label class="form-check-label" for="exampleCheck1">
-										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
-									</label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						     </label>
-							  </div>
-							  <div class="form-check">
-							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-							    </label>
-							  </div>
-							</form>
-        		</div>
-          </div><!-- END-->
-          <div class="col-lg-9">
+      <div class="container" name='paquete_cliente'>
           	<div class="row">
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-1.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">New Orleans, LA</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>8 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$40<br><small>/night</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Far far away, behind the word mountains, far from the countries</p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-2.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">New Orleans, LA</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>8 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$40<br><small>/night</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Far far away, behind the word mountains, far from the countries</p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-3.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">New Orleans, LA</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>8 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$40<br><small>/night</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Far far away, behind the word mountains, far from the countries</p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-4.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">New Orleans, LA</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>8 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$40<br><small>/night</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Far far away, behind the word mountains, far from the countries</p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-5.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">New Orleans, LA</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>8 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$40<br><small>/night</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Far far away, behind the word mountains, far from the countries</p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-5.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">New Orleans, LA</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>8 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$40<br><small>/night</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Far far away, behind the word mountains, far from the countries</p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    		</div>
+								<?php
+									include ("conexion.php");
+									$sql = "SELECT id_paquete, disponibilidad, cantidad_personas, precio, fecha_inicio, fecha_final, ubicacion, descripcion, nombre_hospedaje, direccion, pension, descripcion_hospedaje, estrellas, contacto, clase, escala, mascota, tipo_transporte FROM paquete_cliente";
+									$result = $con->query($sql);
 
-          	<div class="row mt-5">
-		          <div class="col text-center">
-		            <div class="block-27">
-		              <ul>
-		                <li><a href="#">&lt;</a></li>
-		                <li class="active"><span>1</span></li>
-		                <li><a href="#">2</a></li>
-		                <li><a href="#">3</a></li>
-		                <li><a href="#">4</a></li>
-		                <li><a href="#">5</a></li>
-		                <li><a href="#">&gt;</a></li>
-		              </ul>
-		            </div>
-		          </div>
-		        </div>
-          </div> <!-- .col-md-8 -->
+									while($row = $result->fetch_assoc()) {
+										$id_paquete = $row["id_paquete"];
+										$disponibilidad = $row["disponibilidad"];
+										$cantidad_personas = $row["cantidad_personas"];
+										$precio = $row["precio"];
+										$fecha_inicio = $row["fecha_inicio"];
+										$fecha_final = $row["fecha_final"];
+										$ubicacion = $row["ubicacion"];
+										$descripcion = $row["descripcion"];
+										$nombre_hospedaje = $row["nombre_hospedaje"];
+										$direccion = $row["direccion"];
+										$pension = $row["pension"];
+										$descripcion_hospedaje = $row["descripcion_hospedaje"];
+										$estrellas = $row["estrellas"];
+										$contacto = $row["contacto"];
+										$clase = $row["clase"];
+										$escala = $row["escala"];
+										$mascota = $row["mascota"];
+										$tipo_transporte = $row["tipo_transporte"];
+										
+										// Generar el HTML utilizando los datos de la vista
+										echo '<div class="container" id="paquete">';
+										echo '<div class="one">';
+										echo '<h3><a href="#">' . $ubicacion . '</a></h3>';
+										echo '<p class="rate">';
+										echo '<span>' . $estrellas . ' estrellas</span>';
+										echo '</p>';
+										echo '</div>';
+										echo '<div class="two">';
+										echo '<span class="price per-price">Precio$' . $precio . '<br><small>' . $cantidad_personas . ' personas</small></span>';
+										echo '</div>';
+										echo '<p>Disponibilidad: ' . $disponibilidad . '</p>';
+										echo '<p>Fecha de inicio: ' . $fecha_inicio . '</p>';
+										echo '<p>Fecha de fin: ' . $fecha_final . '</p>';
+										echo '<p>' . $descripcion . '</p>';
+										echo '<p>Nombre del hospedaje: ' . $nombre_hospedaje . '</p>';
+										echo '<p>Descripción del hospedaje: ' . $descripcion_hospedaje . '</p>';
+										echo '<p>Dirección: ' . $direccion . '</p>';
+										echo '<p>Pensión: ' . $pension . '</p>';
+										echo '<p>Contacto: ' . $contacto . '</p>';
+										echo '<p>Clase: ' . $clase . '</p>';
+										echo '<p>Escala: ' . $escala . '</p>';
+										echo '<p>Mascota: ' . $mascota . '</p>';
+										echo '<p>Tipo de transporte: ' . $tipo_transporte . '</p>';
+										echo '<hr>';
+										echo '<p class="bottom-area d-flex">';
+										echo '<span><i class="icon-map-o"></i> ' . $ubicacion . '</span>';
+										echo '<span class="ml-auto"><a href="#">Book Now</a></span>';
+										echo '</p>';
+										echo '</div>';
+										
+
+									}
+
+								?>
+
         </div>
       </div>
     </section> <!-- .section -->
 
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

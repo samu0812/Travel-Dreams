@@ -10,7 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fecha_nacimiento = date('Y-m-d',strtotime(mysqli_real_escape_string($con,$_POST['fecha_nacimiento'])));
     $direccion = mysqli_real_escape_string($con,$_POST['direccion']);
     $telefono = mysqli_real_escape_string($con,$_POST['telefono']);
-    $email = mysqli_real_escape_string($con,$_POST['$email']);
+
+    $correo = mysqli_real_escape_string($con, $_POST['correo']);
     $nombre = mysqli_real_escape_string($con,$_POST['nombre']);
     $apellido = mysqli_real_escape_string($con,$_POST['apellido']);
     $dni = mysqli_real_escape_string($con,$_POST['dni']);
@@ -20,11 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if (isset($_POST["registroAdmin"])) {
-        $email = $_POST["correo"];
+        $correo = $_POST["correo"];
         $dni = $_POST["dni"];
     
         // Validar que correo y DNI no existan en la base de datos
-        $validar = "SELECT * FROM personas WHERE correo='$email' OR dni='$dni'";
+        $validar = "SELECT * FROM personas WHERE correo='$correo' OR dni='$dni'";
         $result = mysqli_query($con, $validar);
     
         if (mysqli_num_rows($result) > 0) {
@@ -40,16 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $nombre = $_POST["nombre"];
             $apellido = $_POST["apellido"];
     
-            $consulta1 = "INSERT INTO personas (fecha_nacimiento, direccion, telefono, correo, nombre, apellido, dni) VALUES ('$fecha_nacimiento', '$direccion', '$telefono', '$email', '$nombre', '$apellido', '$dni')";
+            $consulta1 = "INSERT INTO personas (fecha_nacimiento, direccion, telefono, correo, nombre, apellido, dni) VALUES ('$fecha_nacimiento', '$direccion', '$telefono', '$correo', '$nombre', '$apellido', '$dni')";
             $resultado1 = mysqli_query($con, $consulta1);
             $personas_id_usuario= mysqli_insert_id($con);
+
             $consulta2= "INSERT INTO usuario_administrador(personas_id_usuario,password) VALUES ('$personas_id_usuario','$password')";
-            $resultado2 = mysqli_query($con,$consulta2);
+            $resultado2 = mysqli_query($con, $consulta2);
+            echo $resultado2;
             
     
             if ($resultado1 and $resultado2) {
                 // Usuario registrado correctamente
-                header("Location: index.php"); // Redirigir a la página de inicio
+                header("Location: indexAdmin.php"); // Redirigir a la página de inicio
                 exit();
             } else {
                 // Error al registrar el usuario
