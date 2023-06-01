@@ -11,7 +11,10 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
@@ -140,7 +143,7 @@
                     echo'<div class="row">'; //columna 1
                     echo'<div class="col">';
                       echo '<div class="mb-3">';
-                        echo '<span>' . $estrellas . ' estrellas</span>';
+                        echo '<p>' . $estrellas . ' estrellas</p>';
                       echo'</div>';
                       echo '<div class="mb-3">';
                         echo '<p>Dirección: ' . $direccion . '</p>';
@@ -153,7 +156,7 @@
 
                     echo'<div class="col order-5">'; //columna 2
                       echo '<div class="mb-3">';
-                        echo '<p>Tipo de transporte: ' . $tipo_transporte . '</p>';
+                        echo '<p>Transporte: ' . $tipo_transporte . '</p>';
                       echo'</div>';
                       echo '<div class="mb-3">';
                         echo '<p>Mascota: ' . $mascota . '</p>';
@@ -163,14 +166,34 @@
                       echo'</div>';
                     echo'</div>';
                   echo'</div>';
-
+                  
+                  
 						
 
 
 										echo '<hr>';
-										echo '<p class="bottom-area d-flex">';
-										echo '<span><i class="icon-map-o"></i> ' . $precio . '</span>';
-										echo '<span class="ml-auto"><a href="#">Comprar</a></span>';
+										echo '<p class="bottom-area d-flex" id="linea">';
+                    echo'<div class="row">'; //columna 1
+                    echo'<div class="col">';
+                      echo '<div class="mb-3">';
+                        echo '<span class="material-symbols-outlined">
+                        attach_money
+                        </span></i> ' . $precio . '</span>';
+                      echo'</div>';
+                    echo'</div>';
+
+
+                    echo'<div class="col order-5">'; //columna 2
+                      echo '<div class="mb-3">';
+                        echo '<button class="Btn">
+                        Comprar
+                        <svg class="svgIcon" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></svg>
+                        </button>';
+                      echo'</div>';
+                    echo'</div>';
+                  echo'</div>';
+
+
 										echo '</p>';
 										echo '</div>';
                     echo'</div>';

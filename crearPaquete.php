@@ -239,7 +239,7 @@
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault4" value='NO' checked>
                 <label class="form-check-label" for="flexRadioDefault4">
-                NO
+                gNO
                 </label>
 
 				  </div>
