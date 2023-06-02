@@ -60,6 +60,8 @@
     		<?php
         		if(isset($_SESSION['usuario'])) {
             		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
+                $id_admin = $_SESSION['usuario'];
+
         		} else {
             			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
 						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
@@ -239,7 +241,7 @@
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault4" value='NO' checked>
                 <label class="form-check-label" for="flexRadioDefault4">
-                gNO
+                NO
                 </label>
 
 				  </div>

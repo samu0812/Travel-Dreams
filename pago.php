@@ -1,9 +1,9 @@
+
+
 <link rel="stylesheet" href="css/pago.css">
 <body>
-  
-
 <div class="modal">
-<form class="form">
+<form class="form" action="" method="POST">
   <div class="payment--options">
     <button name="paypal" type="button">
       <svg xml:space="preserve" viewBox="0 0 124 33" height="33px" width="124px" y="0px" x="0px" id="Layer_1" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -57,27 +57,109 @@
   </div>
   <div class="separator">
     <hr class="line">
-    <p>or pay using credit card</p>
+    <p>Su pago</p>
     <hr class="line">
   </div>
+  <?php
+    if (isset($_GET['id_paquete'])) {
+      $id_paquete = $_GET['id_paquete'];
+      $precio = $_GET['precio'];
+      // Hacer algo con el id_paquete
+}
+?>
+
+
+  
+
+
   <div class="credit-card-info--form">
+  <?php
+    echo '<div class="input_container">';
+    echo '<label for="password_field" class="input_label">Id Paquete / Precio</label>';
+    echo '<div class="split">';
+    echo '<input id="password_field" class="input_field" disabled type="text" name="input-name" title="Expiry Date" placeholder="Id Paquete" value='. $id_paquete .'>';
+    echo '<input id="password_field" class="input_field" disabled type="number" name="cvv" title="CVV" placeholder="Precio" value='. $precio .'>';
+    echo '</div>';
+
+    echo '<div class="input_container">';
+    echo '<label for="password_field" class="input_label">Cantidad de cuotas</label>';
+    echo '<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required name= "cantidad_cuota">';
+    echo '<option selected >Cantidad Cuotas</option>';
+    echo '<option value="1">1</option>';
+    echo '<option value="3">3</option>';
+    echo '<option value="6">6</option>';
+    echo '<option value="12">12</option>';
+    echo '</select>';
+    echo '</div>';
+
+    echo '<div class="input_container">';
+    echo '<label for="metodo_Pago" class="input_label">Metodo de pago</label>';
+    echo '<select id="metodo_Pago"  onchange="mostrarCampoAdicional()" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required name="metodo_pago">';
+    echo '<option selected>Metodo de pago</option>';
+    echo '<option value="Transferencia">Transferencia</option>';
+    echo '<option value="Tarjeta">Tarjeta de credito</option>';
+    echo '</select>';
+    echo '</div>';
+    echo '<div id="campo-adicional" style="display: none;"class="input_label">';
+    echo '<label for="campo" class="input_label">CVU  </label>';
+    echo '<input type="text" id="campo" name="campo" class="input_field" placeholder="345345357" disabled>';
+    echo '</div>';
+  ?>
+
+  <script>
+    function mostrarCampoAdicional() {
+      var select = document.getElementById("metodo_Pago");
+      var campoAdicional = document.getElementById("campo-adicional");
+
+
+      if (select.value === "Transferencia") {
+        campoAdicional.style.display = "block";
+      } else {
+        campoAdicional.style.display = "none";
+      }
+
+      var nombre_titular = document.getElementById("nombre_titular");
+      var numero_tarjeta= document.getElementById("numero_tarjeta");
+      var fecha_vencimiento= document.getElementById(" fecha_vencimiento");
+      var numero_seguridad= document.getElementById("numero_seguridad");
+            if (select.value === "Tarjeta"){
+              nombre_titular.disabled = false;
+              numero_tarjeta.disabled = false;
+              fecha_vencimiento.disabled = false;
+              numero_seguridad.disabled = false;
+
+
+            }else{
+              nombre_titular.disabled= true;
+              numero_tarjeta.disabled= true;
+              fecha_vencimiento.disabled= true;
+              numero_seguridad.disabled= true;
+            }
+    }
+  </script>
+</div>
+
     <div class="input_container">
-      <label for="password_field" class="input_label">Card holder full name</label>
-      <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Enter your full name">
+      <label for="password_field" class="input_label">Nombre del titular</label>
+      <input id="nombre_titular"  class="input_field" type="text" disabled name="nombre_titular" title="Inpit title" placeholder="Nombre y apellido">
     </div>
     <div class="input_container">
-      <label for="password_field" class="input_label">Card Number</label>
-      <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
+      <label for="password_field" class="input_label">Numero de tarjeta</label>
+      <input id="numero_tarjeta" class="input_field" type="number" disabled name="numero_tarjeta" title="Inpit title" placeholder="0000 0000 0000 0000">
     </div>
     <div class="input_container">
-      <label for="password_field" class="input_label">Expiry Date / CVV</label>
+      <label for="password_field" class="input_label">Fecha vencimiento / CVV</label>
       <div class="split">
-      <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date" placeholder="01/23">
-      <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="CVV">
+      <input id=" fecha_vencimiento" class="input_field" type="text" disabled name="fecha_vencimiento" title="Expiry Date" placeholder="01/23">
+      <input id="numero_seguridad" class="input_field" type="number" disabled name="numero_seguridad" title="CVV" placeholder="007">
     </div>
     </div>
   </div>
-    <button class="purchase--btn">Checkout</button>
+    <button class="purchase--btn" type="submit" value="comprar" name="comprar">Comprar</button>
 </form>
+
+<?php
+  include("controlPago.php")
+?>
 </div>
 </body>
