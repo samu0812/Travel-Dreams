@@ -155,7 +155,7 @@
     </div>
     </div>
   </div>
-    <button class="purchase--btn" type="submit" value="comprar" name="comprar">Comprar</button>
+    <button class="purchase--btn"  type="submit" value="comprar" name="comprar">Comprar</button>
 </form>
 
 <?php

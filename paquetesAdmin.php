@@ -4,12 +4,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Adventure - Free Bootstrap 4 Template by Colorlib</title>
+    <title>TravelDreams</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -29,6 +36,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/paquete.css">
   </head>
   <body>
     
@@ -46,7 +54,6 @@
             <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
 	          <li class="nav-item active"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li> <!-- Provincias y descripcion de c/u -->
 	          <li class="nav-item"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li><!-- Paquetes con transporte, hospedaja-->
-            <li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
 			  <!-- Eliminar blog -->
 
 			  <li class="nav-item">
@@ -80,96 +87,8 @@
     </div>
 		
 		<section class="ftco-section">
-      <div class="container">
-        <div class="row">
-        	<div class="col-lg-3 sidebar order-md-last ftco-animate">
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Find City</h3>
-        			<form action="#">
-        				<div class="fields">
-		              <div class="form-group">
-		                <input type="text" class="form-control" placeholder="Destination, City">
-		              </div>
-		              <div class="form-group">
-		                <div class="select-wrap one-third">
-	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control" placeholder="Keyword search">
-	                      <option value="">Select Location</option>
-	                      <option value="">San Francisco USA</option>
-	                      <option value="">Berlin Germany</option>
-	                      <option value="">Lodon United Kingdom</option>
-	                      <option value="">Paris Italy</option>
-	                    </select>
-	                  </div>
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Date from">
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkout_date" class="form-control checkout_date" placeholder="Date to">
-		              </div>
-		              <div class="form-group">
-		              	<div class="range-slider">
-		              		<span>
-										    <input type="number" value="25000" min="0" max="120000"/>	-
-										    <input type="number" value="50000" min="0" max="120000"/>
-										  </span>
-										  <input value="1000" min="0" max="120000" step="500" type="range"/>
-										  <input value="50000" min="0" max="120000" step="500" type="range"/>
-										  </svg>
-										</div>
-		              </div>
-		              <div class="form-group">
-		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-		              </div>
-		            </div>
-	            </form>
-        		</div>
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Star Rating</h3>
-        			<form method="post" class="star-rating">
-							  <div class="form-check">
-									<input type="checkbox" class="form-check-input" id="exampleCheck1">
-									<label class="form-check-label" for="exampleCheck1">
-										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
-									</label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						     </label>
-							  </div>
-							  <div class="form-check">
-							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-							    </label>
-							  </div>
-							</form>
-        		</div>
-          </div><!-- END-->
-          <div class="col-lg-9">
+      <div class="container" action="" method="POST" name='paquete_cliente'>
           	<div class="row">
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-1.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-link"></span>
-		    						</div>
-		    					</a>
 								<?php
 									include ("conexion.php");
 									$sql = "SELECT id_paquete, disponibilidad, cantidad_personas, precio, fecha_inicio, fecha_final, ubicacion, descripcion, nombre_hospedaje, direccion, pension, descripcion_hospedaje, estrellas, contacto, clase, escala, mascota, tipo_transporte FROM paquete_cliente";
@@ -196,112 +115,103 @@
 										$tipo_transporte = $row["tipo_transporte"];
 										
 										// Generar el HTML utilizando los datos de la vista
-										echo '<div class="col-sm col-md-6 col-lg-4 ftco-animate">';
-										echo '<div class="destination">';
-
-										echo '<div class="icon d-flex justify-content-center align-items-center">';
-										echo '<span class="icon-link"></span>';
-										echo '</div>';
-										echo '</a>';
-										echo '<div class="text p-3">';
-										echo '<div class="d-flex">';
-										echo '<div class="one">';
+                    echo '<div class="container" id="paquete">';
+                    echo '<div class="one">';
 										echo '<h3><a href="#">' . $ubicacion . '</a></h3>';
-										echo '<p class="rate">';
-										echo '<span>' . $estrellas . ' estrellas</span>';
-										echo '</p>';
-										echo '</div>';
-										echo '<div class="two">';
-										echo '<span class="price per-price">$' . $precio . '<br><small>' . $cantidad_personas . ' personas</small></span>';
-										echo '</div>';
-										echo '</div>';
-										echo '<p>Disponibilidad: ' . $disponibilidad . '</p>';
-										echo '<p>Fecha de inicio: ' . $fecha_inicio . '</p>';
-										echo '<p>Fecha de fin: ' . $fecha_final . '</p>';
-										echo '<p>' . $descripcion . '</p>';
-										echo '<p>Nombre del hospedaje: ' . $nombre_hospedaje . '</p>';
-										echo '<p>Descripción del hospedaje: ' . $descripcion_hospedaje . '</p>';
-										echo '<p>Dirección: ' . $direccion . '</p>';
-										echo '<p>Pensión: ' . $pension . '</p>';
-										echo '<p>Contacto: ' . $contacto . '</p>';
-										echo '<p>Clase: ' . $clase . '</p>';
-										echo '<p>Escala: ' . $escala . '</p>';
-										echo '<p>Mascota: ' . $mascota . '</p>';
-										echo '<p>Tipo de transporte: ' . $tipo_transporte . '</p>';
+                    echo '<p>' . $descripcion . '</p>';
+
+                      echo'<div class="row">'; //columna 1
+                        echo'<div class="col">';
+                          echo '<div class="mb-3">';
+                            echo '<label id="columna1">Disponibilidad: ' . $disponibilidad . '</label>';
+                          echo'</div>';
+                          echo '<div class="mb-3">';
+                          echo '<label id="columna1">Fecha de inicio: ' . $fecha_inicio . '</label>';
+                          echo'</div>';
+                        echo'</div>';
+
+
+                        echo'<div class="col order-5">'; //columna 2
+                          echo '<div class="mb-3">';
+                            echo '<label id="columna2">Para ' . $cantidad_personas . ' personas</label>';
+                          echo'</div>';
+                          echo '<div class="mb-3">';
+                            echo '<label id="columna1">Fecha de fin: ' . $fecha_final . '</label>';
+                          echo'</div>';
+                        echo'</div>';
+                      echo'</div>';
+
+                    echo '<p>Nombre del hospedaje: ' . $nombre_hospedaje . '</p>';
+                    echo '<p>Descripción del hospedaje: ' . $descripcion_hospedaje . '</p>';
+
+                    echo'<div class="row">'; //columna 1
+                    echo'<div class="col">';
+                      echo '<div class="mb-3">';
+                        echo '<p>' . $estrellas . ' estrellas</p>';
+                      echo'</div>';
+                      echo '<div class="mb-3">';
+                        echo '<p>Dirección: ' . $direccion . '</p>';
+                      echo'</div>';
+                      echo '<div class="mb-3">';
+                        echo '<p>Clase: ' . $clase . '</p>';
+                      echo'</div>';
+                    echo'</div>';
+
+
+                    echo'<div class="col order-5">'; //columna 2
+                      echo '<div class="mb-3">';
+                        echo '<p>Transporte: ' . $tipo_transporte . '</p>';
+                      echo'</div>';
+                      echo '<div class="mb-3">';
+                        echo '<p>Mascota: ' . $mascota . '</p>';
+                      echo'</div>';
+                      echo '<div class="mb-3">';
+                        echo '<p>Escala: ' . $escala . '</p>';
+                      echo'</div>';
+                    echo'</div>';
+                  echo'</div>';
+                  
+                  
+						
+
+
 										echo '<hr>';
-										echo '<p class="bottom-area d-flex">';
-										echo '<span><i class="icon-map-o"></i> ' . $ubicacion . '</span>';
-										echo '<span class="ml-auto"><a href="#">Book Now</a></span>';
+										echo '<p class="bottom-area d-flex" id="linea">';
+                    echo'<div class="row">'; //columna 1
+                    echo'<div class="col">';
+                      echo '<div class="mb-3">';
+                        echo '<span class="material-symbols-outlined">
+                        attach_money
+                        </span></i> ' . $precio . '</span>';
+                      echo'</div>';
+                    echo'</div>';
+
+
+                    echo'<div class="col order-5">'; //columna 2
+                      echo '<div class="mb-3">';
+                      echo '<a class="Btn" href="pago.php?id_paquete=' . $id_paquete . '&precio=' . $precio . '" type="submit" value="pago" name="pago">
+
+                        Comprar
+                        <svg class="svgIcon" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></svg>
+                        </a>';
+                      echo'</div>';
+                    echo'</div>';
+                  echo'</div>';
+
+
 										echo '</p>';
 										echo '</div>';
-										echo '</div>';
-										echo '</div>';
+                    echo'</div>';
+										
+
 									}
 
 								?>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">ubicacion</a></h3>
-				    						<p class="rate">
-				    							<span>estrellas</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price per-price">$<br><small>cantidad personas</small></span>
-		    							</div>
-		    						</div>
-		    						<p>Disponibilidad</p>
-									<p>Fecha de inicio</p>
-									<p>Fecha de fin</p>
-									<p>Descripcion</p>
-									<p>nombre hospedaje</p>
-									<p>descripcion hospedaje</p>
-									<p>direccion</p>
-									<p>pension</p>
-									<p>contacto</p>
-									<p>clase</p>
-									<p>escala</p>
-									<p>mascota</p>
-									<p>tipo_transporte</p>
-									
-						
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-		    							<span class="ml-auto"><a href="#">Book Now</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			
 
         </div>
       </div>
     </section> <!-- .section -->
 
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

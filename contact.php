@@ -44,17 +44,16 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
-	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
-	          <li class="nav-item "><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
-			  <!-- Eliminar blog -->
 	          <li class="nav-item active"><a href="contact.php" class="nav-link">Contactanos</a></li>
 			  <li class="nav-item">
     		<?php
         		if(isset($_SESSION['usuario'])) {
-            		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
+                echo '<li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li>';
+                echo ' <li class="nav-item "><a href="paquetes.php" class="nav-link">Paquetes</a></li>';
+                echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
         		} else {
             			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
-						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+						      echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
 
        				 }
     		?>
@@ -86,16 +85,16 @@
           </div>
           <div class="w-100"></div>
           <div class="col-md-3">
-            <p><span>Dirección:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+            <p><span>Dirección:</span> Formosa 3600</p>
           </div>
           <div class="col-md-3">
             <p><span>Teléfono:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
           </div>
           <div class="col-md-3">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+            <p><span>Email:</span> <a href="mailto:info@yoursite.com">traveldreams@yoursite.com</a></p>
           </div>
           <div class="col-md-3">
-            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+            <p><span>Website</span> <a href="#">traveldreams.com</a></p>
           </div>
         </div>
 
@@ -107,8 +106,8 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Adventure</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">TravelDreams</h2>
+              <p>Una empresa dedicada plenamente al cliente con el fin de brindarle las mejores experiencias</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>

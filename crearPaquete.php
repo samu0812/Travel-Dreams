@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -53,7 +56,6 @@
             <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
 	          <li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li> <!-- Provincias y descripcion de c/u -->
 	          <li class="nav-item active"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li><!-- Paquetes con transporte, hospedaja-->
-            <li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
 			  <!-- Eliminar blog -->
 
 			  <li class="nav-item">
@@ -64,7 +66,7 @@
 
         		} else {
             			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
-						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+						      echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
 
        				 }
     		?>
@@ -136,11 +138,31 @@
               <option selected>Lugar</option>
               <option value="Formosa">Formosa</option>
               <option value="Salta">Salta</option>
-              <option value="Buenos Aires">Buenos Aires</option>
+              <option value="Jujuy">Jujuy</option>
+              <option value="Tucumán">Tucumán</option>
+              <option value="La Rioja">La Rioja</option>
+              <option value="Catamarca">Catamarca</option>
+              <option value="Misiones">Misiones</option>
+              <option value="Córdoba">Córdoba</option>
+              <option value="Corrientes">Corrientes</option>
+              <option value="Chaco">Chaco</option>
+              <option value="Santa Fe">Santa Fe</option>
+              <option value="Chubut">Chubut</option>
+              <option value="Mendoza">Mendoza</option>
+              <option value="Santiago del Estero">Santiago del Estero</option>
+              <option value="San Juan">San Juan</option>
+              <option value="San Luis">San Luis</option>
+              <option value="Tierra del Fuego">Tierra del Fuego</option>
+              <option value="La Pampa">La Pampa</option>
+              <option value="Entre Ríos">Entre Ríos</option>
+              <option value="Santa Cruz">Santa Cruz</option>
+              <option value="Neuquén">Neuquén</option>
+              <option value="Río Negro">Río Negro</option>
             </select>
       <div class="form-floating">
-        <label for="floatingTextarea2">Descripción</label>
-        <textarea class="form-control" placeholder="Describe los lugares del paquete..." id="floatingTextarea2" style="height: 100px" name=descripcion></textarea>
+
+        <textarea class="form-control" placeholder="Describe los lugares del paquete..." id="exampleFormControlTextarea1" style="height: 100px" name=descripcion></textarea>
+        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
       </div>
       </div>
       <div class="datosHospedaje">
@@ -169,8 +191,9 @@
 				</div>
         </div>
     <div class="form-floating">
+
+      <textarea class="form-control" placeholder="Describe el Hospedaje..." id="floatingTextarea2" style="height: 100px" required name="descripcion_hospedaje"></textarea>
       <label for="floatingTextarea2">Descripción</label>
-      <textarea class="form-control" placeholder="Describe el Hospedaje..." id="floatingTextarea2" style="height: 100px" name="descripcion_hospedaje"></textarea>
     </div>
       </div class="pension">
         <label for="pension" class="form-label">Pension</label>
@@ -214,15 +237,15 @@
         <div class="col-md-6">
 					<div class="mb-3">
             <div class="mascota">
-              <label for="mascota" class="form-label">mascota</label>
+              <label for="mascota" class="form-label">Mascota</label>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault3" value='SI'>
+                <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault3" required value='SI'>
                 <label class="form-check-label" for="flexRadioDefault3">
                   SI
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault4" value='NO' checked>
+                <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault4" required value='NO' checked>
                 <label class="form-check-label" for="flexRadioDefault4">
                 NO
                 </label>
@@ -233,13 +256,13 @@
             <div class="escala">
               <label for="escala" class="form-label">Escala</label>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault3" value='SI'>
+                <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault3" required value='SI'>
                 <label class="form-check-label" for="flexRadioDefault3">
                   SI
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault4" value='NO' checked>
+                <input class="form-check-input" type="radio" name="escala" id="flexRadioDefault4" required value='NO' checked>
                 <label class="form-check-label" for="flexRadioDefault4">
                 NO
                 </label>
@@ -249,7 +272,7 @@
       <label>Precio del Paquete</label>
       <div class="input-group mb-3">
         <span class="input-group-text">$</span>
-        <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name='precio'>
+        <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" required name='precio'>
         </div>
       </div>
 			<button type="submit" value="crear_paquete" class="btn btn-outline-secondary" name="crear_paquete">Crear Paquete</button>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/registro.css">
+  <link rel="stylesheet" href="./css/registroCliente.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/8c68749bc1.js" crossorigin="anonymous"></script>
@@ -13,10 +13,12 @@
     crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <title>registro cliente</title>
 </head>
-<body>
+<body  class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.php">Travel Dreams</a>
@@ -29,9 +31,6 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li>
-          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis Viajes</a></li>
-          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li>
-          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
           <li class="nav-item activate"><a href="login.php" class="nav-link">Login</a></li>
           <li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>
         </ul>

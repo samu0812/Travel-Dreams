@@ -46,7 +46,6 @@
             <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
 	          <li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li> <!-- Provincias y descripcion de c/u -->
 	          <li class="nav-item"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li><!-- Paquetes con transporte, hospedaja-->
-            <li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
 			  <!-- Eliminar blog -->
 
 			  <li class="nav-item">

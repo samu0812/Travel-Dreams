@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Adventure - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Traveldreams</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -51,10 +51,11 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
-	          <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
-	          <li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
+	          
 			  <!-- Eliminar blog -->
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+            <li class="nav-item"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
+            <li class="nav-item active"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
 			  <li class="nav-item">
     		<?php
         		if(isset($_SESSION['usuario'])) {

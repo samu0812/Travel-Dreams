@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Registro Administrador</title>
 </head>
-<body>
+<body  class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.php">Travel Dreams</a>
@@ -24,11 +24,6 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="indexAdmin.php" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="acercaAdmin.php" class="nav-link">Acerca de</a></li>
-          <li class="nav-item"><a href="viajesAdmin.php" class="nav-link">Viajes</a></li>
-          <li class="nav-item"><a href="paquetesAdmin.php" class="nav-link">Paquetes</a></li>
-          <li class="nav-item"><a href="crearPaquete.php" class="nav-link">Crear Paquete</a></li>
-          <li class="nav-item"><a href="contactAdmin.php" class="nav-link">Contacto</a></li>
           <li class="nav-item activate"><a href="loginAdmin.php" class="nav-link">Login</a></li>
           <li class="nav-item"><a href="registroAdmin.php" class="nav-link">Registrarse</a></li>
         </ul>

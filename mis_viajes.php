@@ -45,17 +45,18 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item "><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="acerca.php" class="nav-link">Acerca de</a></li> <!-- Descripción de la empresa-->
-	          <li class="nav-item active"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
+            <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+            <li class="nav-item active"><a href="mis_viajes.php" class="nav-link">Mis viajes</a></li> <!-- Provincias y descripcion de c/u -->
 	          <li class="nav-item"><a href="paquetes.php" class="nav-link">Paquetes</a></li><!-- Paquetes con transporte, hospedaja-->
 			  <!-- Eliminar blog -->
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contactanos</a></li>
+	          
 			  <li class="nav-item">
     		<?php
         		if(isset($_SESSION['usuario'])) {
             		echo '<a href="cerrarSesion.php" class="nav-link">Cerrar sesión</a>';
         		} else {
             			echo '<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>';
-						echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
+						      echo '<li class="nav-item"><a href="registro.php" class="nav-link">Registrarse</a></li>';
 
        				 }
     		?>
